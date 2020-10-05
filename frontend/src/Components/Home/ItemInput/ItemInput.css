@@ -1,0 +1,17 @@
+.card-img-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+}
+
+.input-number {
+    width: 30%;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid red;
+}
