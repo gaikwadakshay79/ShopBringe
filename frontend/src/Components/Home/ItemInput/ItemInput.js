@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import "./ItemInput.css";
 
-function ItemInput() {
-  const [imgSrc, setImgSrc] = useState("https://icon-library.net/images/upload-photo-icon/upload-photo-icon-21.jpg");
+function ItemInput({ handleOnAdd }) {
+    const DEFAULT_IMAGE = "https://icon-library.net/images/upload-photo-icon/upload-photo-icon-21.jpg";
+  const [imgSrc, setImgSrc] = useState(DEFAULT_IMAGE);
   const imageRef = useRef(null);
   const [itemName, setItemName] = useState("Enter Item Name");
   const [itemPriceL, setItemPriceL] = useState(0);
@@ -70,9 +71,17 @@ function ItemInput() {
     }
   }
 
-  function handleImageClick(){
-      console.log(imageRef.current)
-    imageRef.current.click()
+  function handleImageClick() {
+    imageRef.current.click();
+  }
+
+  function handleButtonClick() {
+    var item = {
+      item_name: itemName,
+      price: parseFloat(itemPriceM + "." + itemPriceL),
+      image: imgSrc === DEFAULT_IMAGE ? null : imgSrc,
+    };
+    handleOnAdd(item);
   }
 
   return (
@@ -117,6 +126,7 @@ function ItemInput() {
         <button
           className="btn btn-primary my-3 w-100"
           disabled={priceError || itemError}
+          onClick={e => handleButtonClick()}
         >
           Add
         </button>

@@ -2,12 +2,12 @@ import React from "react";
 import Item from "../Item/Item";
 import "./ItemList.css";
 
-function ItemList({itemList}) {
+function ItemList({itemList,onDelete}) {
   return (
     <div className="row p-3">
       {" "}
-      {itemList.map(number => (
-        <Item key={number} />
+      {itemList.map(item => (
+        <Item key={item.id} name={item.item_name} price={item.price} onDelete={onDelete} id={item.id}/>
       ))}{" "}
     </div>
   );
