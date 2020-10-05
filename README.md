@@ -1,2 +1,2 @@
-# ShopBringe
-ShopBringe Cart App
+# ShopBridge
+ShopBridge Cart App

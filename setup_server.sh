@@ -8,7 +8,7 @@ docker run --name postgres -e POSTGRES_PASSWORD=ubuntu -e POSTGRES_USER=root -p 
 # docker start postgres bash
 # psql -U root
 # CREATE DATABASE postgres;
-# CREATE DATABASE shopbringe;
+# CREATE DATABASE shopbridge;
 
 
 ## After making sure that db is created

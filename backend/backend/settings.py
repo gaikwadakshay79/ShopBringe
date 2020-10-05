@@ -97,7 +97,7 @@ DATABASES = {
     },
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'shopbringe',
+        'NAME': 'shopbridge',
         'USER': 'root',
         'PASSWORD': 'ubuntu',
         'HOST': '0.0.0.0',
