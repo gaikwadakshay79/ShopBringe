@@ -7,7 +7,7 @@ function ItemList({itemList,onDelete}) {
     <div className="row p-3">
       {" "}
       {itemList.map(item => (
-        <Item key={item.id} name={item.item_name} price={item.price} onDelete={onDelete} id={item.id}/>
+        <Item key={item.id} name={item.item_name} price={item.price} onDelete={onDelete} id={item.id} image={item.image}/>
       ))}{" "}
     </div>
   );

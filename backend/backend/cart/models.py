@@ -7,4 +7,4 @@ class Item(models.Model):
     item_name = models.CharField(max_length=100)
     added_on = models.DateTimeField(auto_now_add=True)
     price = models.FloatField()
-    image = models.TextField()
+    image = models.TextField(null=True, blank=True)

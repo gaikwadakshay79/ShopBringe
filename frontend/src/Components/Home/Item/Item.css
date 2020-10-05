@@ -5,3 +5,10 @@
 .button-item:hover {
     opacity: 1;
 }
+
+.card-top {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    height: 40%;
+}

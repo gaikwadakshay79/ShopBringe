@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import "./ItemInput.css";
+import upload_photo from './upload-photo.jpg'
 
 function ItemInput({ handleOnAdd }) {
-    const DEFAULT_IMAGE = "https://icon-library.net/images/upload-photo-icon/upload-photo-icon-21.jpg";
+    const DEFAULT_IMAGE = upload_photo;
   const [imgSrc, setImgSrc] = useState(DEFAULT_IMAGE);
   const imageRef = useRef(null);
   const [itemName, setItemName] = useState("Enter Item Name");
@@ -82,6 +83,12 @@ function ItemInput({ handleOnAdd }) {
       image: imgSrc === DEFAULT_IMAGE ? null : imgSrc,
     };
     handleOnAdd(item);
+    setImgSrc(DEFAULT_IMAGE);
+    setItemName("Enter Item Name");
+    setItemPriceL(0);
+    setItemPriceM(0);
+    setItemError(false);
+    setPriceError(false);
   }
 
   return (
