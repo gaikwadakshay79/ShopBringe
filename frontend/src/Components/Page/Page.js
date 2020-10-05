@@ -30,7 +30,7 @@ function Page(state) {
         <div className="container shadow p-2">
           <div className="row">
             <div className="col-6 w-100 h-100">
-              <img className="img w-100 h-100" src={image}></img>
+              <img alt="..." className="img w-100 h-100" src={image}></img>
             </div>
             <div className="col-6 w-100 h-100 d-flex flex-column justify-content-between">
               <h1>{name}</h1>

@@ -3,7 +3,6 @@ import "./Item.css";
 import no_image from "./no_image.jpg";
 
 function Item({ name, price, image, onDelete, id }) {
-  const URL = "http://localhost:8000/item/";
   return (
     <div className="item_input card col-xs-12 col-sm-6 col-md-6 col-lg-3 p-0">
       <img
