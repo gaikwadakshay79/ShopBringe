@@ -3,9 +3,9 @@ from django.test import TestCase
 from rest_framework import status
 from django.urls import include, path, reverse
 from rest_framework.test import APITestCase
+from .models import Item
 
-
-class AccountTests(APITestCase):
+class ItemTests(APITestCase):
     def test_create_item(self):
         itemDetails = {
             "item_name": "item_name",
