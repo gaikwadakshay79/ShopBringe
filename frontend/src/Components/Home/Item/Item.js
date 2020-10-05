@@ -1,6 +1,6 @@
 import React from "react";
 import "./Item.css";
-import no_image from "./no_image.jpg";
+import DEFAULT_IMAGE from "./no_image.jpg";
 
 function Item({ name, price, image, onDelete, id }) {
   return (
@@ -8,7 +8,7 @@ function Item({ name, price, image, onDelete, id }) {
       <img
         className="card-top shadow"
         alt="..."
-        src={image || no_image}
+        src={image || DEFAULT_IMAGE}
         onClick={e => {
           window.location = "/item/" + id;
         }}

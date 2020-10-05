@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./ItemInput.css";
-import upload_photo from './upload-photo.jpg'
+import DEFAULT_IMAGE from "./upload-photo.jpg";
 
 function ItemInput({ handleOnAdd }) {
-    const DEFAULT_IMAGE = upload_photo;
   const [imgSrc, setImgSrc] = useState(DEFAULT_IMAGE);
   const imageRef = useRef(null);
   const [itemName, setItemName] = useState("Enter Item Name");
@@ -80,7 +79,7 @@ function ItemInput({ handleOnAdd }) {
     var item = {
       item_name: itemName,
       price: parseFloat(itemPriceM + "." + itemPriceL),
-      image: imgSrc === DEFAULT_IMAGE ? null : imgSrc,
+      image: imgSrc === DEFAULT_IMAGE ? null : imgSrc
     };
     handleOnAdd(item);
     setImgSrc(DEFAULT_IMAGE);
